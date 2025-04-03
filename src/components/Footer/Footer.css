@@ -9,7 +9,7 @@ footer{
 .footer__copyright {
     text-align: center;
     padding: 1rem;
-    color: var(--color-white);
+    color: black;
     font-weight: 300;
 }
 

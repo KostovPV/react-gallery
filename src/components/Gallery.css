@@ -1,6 +1,6 @@
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 25px;
     padding: 1rem;
     margin-top: 6rem;
@@ -51,7 +51,7 @@
   
   .image-cell p,
   .pdf-thumbnail p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin: 0;
     padding-top: 0.5rem;
     word-break: break-word;

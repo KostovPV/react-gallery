@@ -80,7 +80,7 @@ const FilterBar = ({
               onChange={handleSort}
               className="filter-sort"
             >
-              <option value="default">Покадреди по</option>
+              <option value="default">Подреди по</option>
               <option value="name">Име</option>
               <option value="date">Дата</option>
             </select>

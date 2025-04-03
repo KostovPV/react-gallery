@@ -22,7 +22,7 @@
 }
 
 .filter-logo {
-    font-size: 1.8rem;
+    font-size: 2.6rem;
     font-weight: 700;
     color: #fff;
     display: flex;
@@ -62,11 +62,17 @@
     color: #fff;
     font-size: 1rem;
     cursor: pointer;
+    font-size: 1.4rem;
 }
 
 .filter-list li button:hover,
 .filter-list li .active {
     color: black;
+}
+
+input,
+select {
+    font-size: 1.1rem;
 }
 
 @media screen and (max-width: 768px) {
