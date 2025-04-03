@@ -1,8 +1,16 @@
 import React, { useState } from "react";
 import "./FilterBar.css";
 
-const FilterBar = ({ currentFilter, onFilterChange }) => {
+const FilterBar = ({
+  currentFilter,
+  onFilterChange,
+  onSearchChange,
+  onSortChange,
+}) => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [sortOrder, setSortOrder] = useState("default");
+
   const filters = [
     { type: "all", label: "Всички" },
     { type: "image", label: "Снимки" },
@@ -14,10 +22,22 @@ const FilterBar = ({ currentFilter, onFilterChange }) => {
     setIsMobileOpen(false);
   };
 
+  const handleSearch = (e) => {
+    const value = e.target.value;
+    setSearchTerm(value);
+    onSearchChange(value);
+  };
+
+  const handleSort = (e) => {
+    const value = e.target.value;
+    setSortOrder(value);
+    onSortChange(value);
+  };
+
   return (
     <header className="filter-header">
       <nav className="filterbar-container">
-        <div className="filter-logo">📷 Galeria</div>
+        <div className="filter-logo">📷 Галерия</div>
 
         <input
           type="checkbox"
@@ -33,7 +53,7 @@ const FilterBar = ({ currentFilter, onFilterChange }) => {
           <span className="line"></span>
         </label>
 
-        <ul className={`filter-list ${isMobileOpen ? "active" : ""}`}>
+        <div className={`filter-list ${isMobileOpen ? "active" : ""}`}>
           {filters.map(({ type, label }) => (
             <li key={type}>
               <button
@@ -44,7 +64,27 @@ const FilterBar = ({ currentFilter, onFilterChange }) => {
               </button>
             </li>
           ))}
-        </ul>
+          <li className="name-search">
+            <input
+              type="text"
+              placeholder="търси по име"
+              value={searchTerm}
+              onChange={handleSearch}
+              className="filter-search"
+            />
+          </li>
+          <li className="arrange-list">
+            <select
+              value={sortOrder}
+              onChange={handleSort}
+              className="filter-sort"
+            >
+              <option value="default">Покадреди по</option>
+              <option value="name">Име</option>
+              <option value="date">Дата</option>
+            </select>
+          </li>
+        </div>
       </nav>
     </header>
   );
