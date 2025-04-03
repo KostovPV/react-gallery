@@ -6,8 +6,9 @@ const FilterBar = ({
   onFilterChange,
   onSearchChange,
   onSortChange,
+  isMobileOpen,
+  setIsMobileOpen,
 }) => {
-  const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [sortOrder, setSortOrder] = useState("default");
 

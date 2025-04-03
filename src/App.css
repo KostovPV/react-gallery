@@ -6,3 +6,12 @@
     box-sizing: border-box;
 }
 
+.content-wrapper {
+    padding-top: 2rem;
+    transition: padding 0.3s ease;
+  }
+  
+  .content-wrapper.mobile-open {
+    padding-top: 260px;
+  }
+  
