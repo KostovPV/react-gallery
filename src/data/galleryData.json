@@ -9,19 +9,19 @@
       "id": "2",
       "title": "Project Plan",
       "type": "pdf",
-      "src": "/docs/template1.pdf"
+      "src": "/pdfs/template1.pdf"
     },
     {
       "id": "3",
       "title": "Beach Sunset",
       "type": "image",
-      "src": "/images/property1.jpg"
+      "src": "/images/property2.jpg"
     },
     {
       "id": "4",
       "title": "Project Plan",
       "type": "pdf",
-      "src": "/docs/template1.pdf"
+      "src": "/pdfs/template1.pdf"
     },
     {
       "id": "5",
@@ -33,7 +33,7 @@
       "id": "6",
       "title": "Project Plan",
       "type": "pdf",
-      "src": "/docs/template1.pdf"
+      "src": "/pdfs/template1.pdf"
     },
     {
       "id": "7",
@@ -45,7 +45,7 @@
       "id": "8",
       "title": "Project Plan",
       "type": "pdf",
-      "src": "/docs/template1.pdf"
+      "src": "/pdfs/template1.pdf"
     }
     ,
     {
@@ -58,20 +58,20 @@
       "id": "10",
       "title": "Project Plan",
       "type": "pdf",
-      "src": "/docs/template1.pdf"
+     "src": "/pdfs/template1.pdf"
     }
     ,
     {
       "id": "11",
       "title": "Beach Sunset",
       "type": "image",
-      "src": "/images/property1.jpg"
+       "src": "/images/property1.jpg"
     },
     {
       "id": "12",
       "title": "Project Plan",
       "type": "pdf",
-      "src": "/docs/template1.pdf"
+      "src": "/pdfs/template1.pdf"
     }
   ]
   

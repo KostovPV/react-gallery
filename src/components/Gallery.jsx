@@ -1,3 +1,5 @@
+import "./Gallery.css";
+
 const Gallery = ({ items, onItemClick }) => {
   return (
     <div className="gallery-grid">
@@ -8,11 +10,21 @@ const Gallery = ({ items, onItemClick }) => {
           onClick={() => onItemClick(item)}
         >
           {item.type === "image" ? (
-            <img src={item.src} alt={item.title} />
+            <div className="image-cell">
+              <div className="image-container">
+                <img src={item.src} alt={item.title} />
+              </div>
+              <p>{item.title}</p>
+            </div>
+
           ) : (
             <div className="pdf-thumbnail">
-              <img src="/images/pdf-icon.png" alt="PDF file" />
-              <p>{item.title}</p>
+              <div className="image-cell">
+                <div className="image-container">
+                  <img src="/images/pdf.jpg" alt="PDF file" />
+                </div>
+                <p>{item.title}</p>
+              </div>
             </div>
           )}
         </div>

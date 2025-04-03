@@ -6,6 +6,7 @@ import data from "./data/galleryData.json";
 import FilterBar from "./components/FilterBar";
 import Gallery from "./components/Gallery";
 import ModalViewer from "./components/ModalViewer";
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [filter, setFilter] = useState("all");
@@ -23,6 +24,7 @@ function App() {
         item={selectedItem}
         onClose={() => setSelectedItem(null)}
       />
+      <Footer />
     </>
   );
 }

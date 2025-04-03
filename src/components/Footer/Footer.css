@@ -1,0 +1,17 @@
+
+footer{
+    background: rgba(118, 183, 230, 0.8);
+  
+}
+.footer {
+    height: 3rem;
+}
+.footer__copyright {
+    text-align: center;
+    padding: 1rem;
+    color: var(--color-white);
+    font-weight: 300;
+}
+
+
+
