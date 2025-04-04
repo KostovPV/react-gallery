@@ -38,7 +38,10 @@ const FilterBar = ({
   return (
     <header className="filter-header">
       <nav className="filterbar-container">
-        <div className="filter-logo">📷 Галерия</div>
+        <div className="filter-logo">
+          <span role="img" aria-label="camera">📷</span>
+          <span>Галерия</span>
+        </div>
 
         <input
           type="checkbox"

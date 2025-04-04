@@ -22,13 +22,21 @@
 }
 
 .filter-logo {
-    font-size: 2.6rem;
     font-weight: 700;
     color: #fff;
     display: flex;
     align-items: center;
     gap: 1rem;
+    margin-bottom: 0.2rem;
 }
+.filter-logo span:first-child {
+    font-size: 1.8rem;
+  }
+  
+  .filter-logo span:last-child {
+    font-size: 2.5rem;
+  }
+  
 
 .filter-toggle {
     display: none;

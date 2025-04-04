@@ -1,17 +1,18 @@
 import { useState } from "react";
 import data from "./data/galleryData.json";
-import FilterBar from "./components/FilterBar";
-import Gallery from "./components/Gallery";
-import ModalViewer from "./components/ModalViewer";
+
+import Gallery from "./components/Gallery/Gallery";
+import ModalViewer from "./components/ModalViewer/ModalViewer";
 import Footer from './components/Footer/Footer';
 import './App.css';
+import FilterBar from "./components/FilterBar/FilterBar";
 
 function App() {
   const [filter, setFilter] = useState("all");
   const [selectedItem, setSelectedItem] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [sortOrder, setSortOrder] = useState("default");
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // ✅
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(null);
 
   const handleItemClick = (item) => {
@@ -59,14 +60,15 @@ function App() {
         onFilterChange={setFilter}
         onSearchChange={setSearchTerm}
         onSortChange={setSortOrder}
-        isMobileOpen={isMobileMenuOpen} // ✅
-        setIsMobileOpen={setIsMobileMenuOpen} // ✅
+        isMobileOpen={isMobileMenuOpen}
+        setIsMobileOpen={setIsMobileMenuOpen}
       />
       <main className={`content-wrapper ${isMobileMenuOpen ? "mobile-open" : ""}`}>
-        <Gallery items={filteredItems} onItemClick={(item) => {
-          blurActiveElement();
-          setSelectedItem(item);
-        }} />
+        <Gallery
+          items={filteredItems}
+          onItemClick={handleItemClick}
+        />
+
         <ModalViewer
           isOpen={!!selectedItem}
           item={selectedItem}
