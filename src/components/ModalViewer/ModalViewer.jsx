@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useMemo  } from "react";
 import Modal from "react-modal";
 import { Document, Page, pdfjs } from "react-pdf";
 import workerSrc from "pdfjs-dist/build/pdf.worker?url";
@@ -7,10 +7,13 @@ import "./ModalViewer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = workerSrc;
 
 const ModalViewer = ({ isOpen, item, onClose, onPrev, onNext }) => {
+  
   const containerRef = useRef(null);
   const [containerWidth, setContainerWidth] = useState(800);
   const [scale, setScale] = useState(1.0);
   const [numPages, setNumPages] = useState(null);
+  
+  const memoizedFile = useMemo(() => ({ url: item?.src }), [item?.src]);
 
   useEffect(() => {
     if (containerRef.current) {
@@ -44,7 +47,7 @@ const ModalViewer = ({ isOpen, item, onClose, onPrev, onNext }) => {
             <img src={item.src} alt={item.title} />
           ) : (
             <Document
-              file={{ url: item.src }}
+              file={memoizedFile}
               onLoadSuccess={onDocumentLoadSuccess}
               loading={<p>Зареждане на PDF...</p>}
             >
