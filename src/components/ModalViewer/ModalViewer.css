@@ -6,11 +6,11 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.75);
   z-index: 1000;
-  overflow-y: auto; 
+  overflow-y: auto;
   display: flex;
   justify-content: center;
-  align-items: flex-start; 
-  padding: 2rem 1rem; 
+  align-items: flex-start;
+  padding: 2rem 1rem;
 }
 
 .modal-content {
@@ -25,23 +25,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
-
-
 
 .modal-wrapper {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: stretch; /* allow full-width content */
+  align-items: stretch;
 }
+
 .modal-container {
   width: 100%;
   display: flex;
-  flex-direction: column; /* Stack PDF pages vertically */
-  justify-content: flex-start; 
-  align-items: center; 
-  margin-bottom: 1rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   overflow: auto;
 }
 
@@ -55,41 +54,20 @@
   display: block;
 }
 
-
-.zoom-controls {
+.fixed-controls {
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2000;
+  background: transparent;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  flex-wrap: wrap;
-}
-
-.zoom-button {
-  background-color: #5c9ded;
-  color: white;
-  border: none;
+  gap: 2rem;
   padding: 0.5rem 1rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 6px;
-  cursor: pointer;
+  border-radius: 12px;
 }
 
-.zoom-button:hover {
-  background-color: #3c7ec0;
-}
-
-.modal-controls {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  padding: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
+/* Navigation buttons */
 .modal-button,
 .modal-nav {
   background-color: #3399cc;
@@ -102,46 +80,51 @@
   font-size: 0.9rem;
 }
 
-.modal-nav:hover,
-.modal-button:hover {
+.modal-button:hover,
+.modal-nav:hover {
   background-color: #237aa6;
 }
 
-  .zoom-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
-    gap: 1rem;
-  }
-  
-  .zoom-button {
-    background-color: #5c9ded;
-    color: white;
-    border: none;
-    padding: 0.4rem 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: 600;
-  }
-  
-  .zoom-button:hover {
-    background-color: #3c7ec0;
-  }
-  /* Reset padding/margin inside PDF canvas */
-  .react-pdf__Page {
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  
-  .react-pdf__Page__canvas {
-    margin: 0 !important;
-    padding: 0 !important;
-    display: block;
-  }
-  
-  .react-pdf__Page + .react-pdf__Page {
-    margin-top: 0 !important; /*Removes space between pages */
-  }
-  
+/* Fixed zoom controls*/
+.fixed-zoom {
+  position: fixed;
+  top: 4.7rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2000;
+  background: transparent;
+  display: flex;
+  gap: 1rem;
+  padding: 0.3rem 1rem;
+  border-radius: 10px;
+}
+
+.zoom-button {
+  background-color: #5c9ded;
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.zoom-button:hover {
+  background-color: #3c7ec0;
+}
+
+.react-pdf__Page {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.react-pdf__Page__canvas {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block;
+}
+
+.react-pdf__Page + .react-pdf__Page {
+  margin-top: 0 !important;
+}
