@@ -86,6 +86,8 @@
   align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
+  padding: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .modal-button,
@@ -137,5 +139,9 @@
     margin: 0 !important;
     padding: 0 !important;
     display: block;
+  }
+  
+  .react-pdf__Page + .react-pdf__Page {
+    margin-top: 0 !important; /*Removes space between pages */
   }
   
