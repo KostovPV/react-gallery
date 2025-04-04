@@ -12,6 +12,26 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [sortOrder, setSortOrder] = useState("default");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // ✅
+  const [currentIndex, setCurrentIndex] = useState(null);
+
+  const handleItemClick = (item) => {
+    blurActiveElement();
+    const index = filteredItems.findIndex(i => i.id === item.id);
+    setCurrentIndex(index);
+    setSelectedItem(item);
+  };
+
+  const handlePrev = () => {
+    const prevIndex = (currentIndex - 1 + filteredItems.length) % filteredItems.length;
+    setCurrentIndex(prevIndex);
+    setSelectedItem(filteredItems[prevIndex]);
+  };
+
+  const handleNext = () => {
+    const nextIndex = (currentIndex + 1) % filteredItems.length;
+    setCurrentIndex(nextIndex);
+    setSelectedItem(filteredItems[nextIndex]);
+  };
 
   const filteredItems = data
     .filter(item =>
@@ -51,9 +71,11 @@ function App() {
           isOpen={!!selectedItem}
           item={selectedItem}
           onClose={() => setSelectedItem(null)}
+          onPrev={handlePrev}
+          onNext={handleNext}
         />
-        <Footer />
       </main>
+      <Footer />
     </>
   );
 }

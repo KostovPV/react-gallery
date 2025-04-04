@@ -15,18 +15,12 @@
   },
   {
     "id": "3",
-    "title": "Beach Sunset",
+    "title": "House",
     "type": "image",
     "src": "/images/property2.jpg",
     "date": "2023-09-05"
   },
-  {
-    "id": "4",
-    "title": "Project Plan",
-    "type": "pdf",
-    "src": "/pdfs/template1.pdf",
-    "date": "2023-07-15"
-  },
+
   {
     "id": "5",
     "title": "Beach Sunset",
@@ -36,23 +30,23 @@
   },
   {
     "id": "6",
-    "title": "Project Plan",
+    "title": "Rent contract",
     "type": "pdf",
-    "src": "/pdfs/template1.pdf",
+    "src": "/pdfs/rent-contract.pdf",
     "date": "2023-06-30"
   },
   {
     "id": "7",
-    "title": "Beach Sunset",
+    "title": "Home comfort",
     "type": "image",
-    "src": "/images/property1.jpg",
+    "src": "/images/comfort.jpg",
     "date": "2023-11-01"
   },
   {
     "id": "8",
-    "title": "Project Plan",
+    "title": "Application",
     "type": "pdf",
-    "src": "/pdfs/template1.pdf",
+    "src": "/pdfs/application.pdf",
     "date": "2023-05-20"
   },
   {
@@ -64,9 +58,9 @@
   },
   {
     "id": "10",
-    "title": "Project Plan",
+    "title": "Waterwheels Windmills Turbines",
     "type": "pdf",
-    "src": "/pdfs/template1.pdf",
+    "src": "/pdfs/WaterwheelsWindmillsTurbines.pdf",
     "date": "2023-10-01"
   },
   {
@@ -78,9 +72,9 @@
   },
   {
     "id": "12",
-    "title": "Project Plan",
+    "title": "Wooden-house",
     "type": "pdf",
-    "src": "/pdfs/template1.pdf",
+    "src": "/pdfs/wooden-house.pdf",
     "date": "2023-08-10"
   }
 ]
