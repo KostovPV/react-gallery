@@ -58,3 +58,10 @@
     color: #333;
   }
   
+  @media screen and (max-width: 1250px) {
+    .gallery-grid {
+      gap: 25px;
+      padding: 2rem;
+      margin-top: 6rem;
+    }
+  }
