@@ -5,41 +5,42 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1000;
+  overflow-y: auto; 
   display: flex;
   justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  padding: 1rem;
+  align-items: flex-start; 
+  padding: 2rem 1rem; 
 }
 
 .modal-content {
   background: white;
   border-radius: 12px;
-  padding: 1rem;
   width: auto;
   max-width: 95vw;
   max-height: 90vh;
   overflow: auto;
   outline: none;
   z-index: 1001;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 
 
 .modal-wrapper {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch; /* allow full-width content */
 }
-
 .modal-container {
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column; /* Stack PDF pages vertically */
+  justify-content: flex-start; 
+  align-items: center; 
   margin-bottom: 1rem;
   overflow: auto;
 }
@@ -125,5 +126,16 @@
   
   .zoom-button:hover {
     background-color: #3c7ec0;
+  }
+  /* Reset padding/margin inside PDF canvas */
+  .react-pdf__Page {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .react-pdf__Page__canvas {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block;
   }
   

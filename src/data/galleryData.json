@@ -8,9 +8,9 @@
   },
   {
     "id": "2",
-    "title": "Project Plan",
+    "title": "Return items",
     "type": "pdf",
-    "src": "/pdfs/template1.pdf",
+    "src": "/pdfs/return goods.pdf",
     "date": "2023-07-01"
   },
   {
@@ -20,12 +20,18 @@
     "src": "/images/property2.jpg",
     "date": "2023-09-05"
   },
-
+  {
+    "id": "4",
+    "title": "Technology",
+    "type": "image",
+    "src": "/images/bmw-technology.jpg",
+    "date": "2023-09-05"
+  },
   {
     "id": "5",
-    "title": "Beach Sunset",
+    "title": "Kitchen peace",
     "type": "image",
-    "src": "/images/property1.jpg",
+    "src": "/images/kitchen.jpg",
     "date": "2023-10-10"
   },
   {
@@ -43,31 +49,24 @@
     "date": "2023-11-01"
   },
   {
-    "id": "8",
-    "title": "Application",
-    "type": "pdf",
-    "src": "/pdfs/application.pdf",
-    "date": "2023-05-20"
-  },
-  {
     "id": "9",
-    "title": "Beach Sunset",
+    "title": "Stair view",
     "type": "image",
-    "src": "/images/property1.jpg",
+    "src": "/images/stairs.jpg",
     "date": "2023-12-25"
   },
   {
     "id": "10",
     "title": "Waterwheels Windmills Turbines",
     "type": "pdf",
-    "src": "/pdfs/WaterwheelsWindmillsTurbines.pdf",
+    "src": "/pdfs/turbines.pdf",
     "date": "2023-10-01"
   },
   {
     "id": "11",
-    "title": "Random",
+    "title": "Tennis court",
     "type": "image",
-    "src": "/images/property1.jpg",
+    "src": "/images/tennis.jpg",
     "date": "2024-01-15"
   },
   {
