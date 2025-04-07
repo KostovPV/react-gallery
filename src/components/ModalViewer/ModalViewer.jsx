@@ -65,14 +65,29 @@ const ModalViewer = ({ isOpen, item, onClose, onPrev, onNext }) => {
               onLoadSuccess={onDocumentLoadSuccess}
               loading={<p>Зареждане на PDF...</p>}
             >
-              {Array.from(new Array(numPages), (_, i) => (
-                <Page
-                  key={`page_${i + 1}`}
-                  pageNumber={i + 1}
-                  width={containerWidth}
-                  scale={scale}
-                />
-              ))}
+              {Array.from(new Array(numPages), (_, i) => {
+                const pageComponent = (
+                  <Page
+                    key={`page_${i + 1}`}
+                    pageNumber={i + 1}
+                    width={containerWidth}
+                    scale={scale}
+                    renderAnnotationLayer={false}
+                    renderTextLayer={false}
+                  />
+                );
+
+                // Add padding to the first page only
+                return i === 0 ? (
+                  <div key={i} className="first-page-wrapper">
+                    {pageComponent}
+                  </div>
+                ) : (
+                  pageComponent
+                );
+              })}
+
+
             </Document>
           )}
         </div>

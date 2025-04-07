@@ -114,10 +114,31 @@
   background-color: #3c7ec0;
 }
 
-.react-pdf__Page {
+.react-pdf__Page * {
   margin: 0 !important;
   padding: 0 !important;
+  line-height: 0 !important;
+  font-size: 0 !important;
 }
+
+.react-pdf__Page {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: start !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  line-height: 0 !important;
+  font-size: 0 !important;
+  gap: 0 !important;
+}
+
+.react-pdf__Page > div {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: auto !important;
+}
+
 
 .react-pdf__Page__canvas {
   margin: 0 !important;
@@ -127,4 +148,83 @@
 
 .react-pdf__Page + .react-pdf__Page {
   margin-top: 0 !important;
+}
+
+.react-pdf__Page__annotations,
+.react-pdf__Page__textContent,
+.react-pdf__Page__canvas {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block;
+}
+
+.react-pdf__Page + .react-pdf__Page {
+  margin-top: 0 !important;
+}
+
+.first-page-wrapper {
+  padding-top: 5rem; 
+}
+.first-page-wrapper canvas {
+  transform: translateY(-5rem);
+}
+
+.react-pdf__Page__canvas {
+  border: 2px solid lime !important;
+}
+
+.react-pdf__Page {
+  border: 2px dashed red !important;
+}
+
+
+
+
+@media screen and (min-width: 1250px) {
+  .first-page-wrapper canvas {
+    transform: translateY(1rem);
+  }
+  
+}
+
+@media screen and (max-width: 1250px) {
+  .first-page-wrapper canvas {
+    transform: translateY(1rem);
+  }
+  
+}
+
+@media screen and (max-width: 1000px) {
+  .first-page-wrapper canvas {
+    transform: translateY(1rem);
+  }
+  
+}
+
+@media screen and (max-width: 700px) {
+  .first-page-wrapper canvas {
+    transform: translateY(-8rem);
+  }
+  
+}
+
+@media screen and (max-width: 600px) {
+  .first-page-wrapper canvas {
+    transform: translateY(-13rem);
+  }
+  
+}
+
+@media screen and (max-width: 500px) {
+  .first-page-wrapper canvas {
+    transform: translateY(-17rem);
+  }
+  
+}
+
+@media screen and (max-width: 400px) {
+  .first-page-wrapper canvas {
+    transform: translateY(-18rem);
+  }
+  
 }
