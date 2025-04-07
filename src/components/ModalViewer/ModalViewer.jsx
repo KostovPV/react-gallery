@@ -63,7 +63,12 @@ const ModalViewer = ({ isOpen, item, onClose, onPrev, onNext }) => {
             <Document
               file={memoizedFile}
               onLoadSuccess={onDocumentLoadSuccess}
-              loading={<p>Зареждане на PDF...</p>}
+              loading={
+                <div className="pdf-tag">
+                  <p className="pdf-loading-text">Зареждане на PDF...</p>
+                </div>
+              }
+              
             >
               {Array.from(new Array(numPages), (_, i) => {
                 const pageComponent = (
