@@ -18,6 +18,9 @@
     padding: 0.5rem;
     box-sizing: border-box;
   }
+  .gallery-item:hover{
+    cursor: pointer;
+  }
   
   .image-cell,
   .pdf-thumbnail {
